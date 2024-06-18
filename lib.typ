@@ -1,3 +1,5 @@
+#import "@preview/typpuccino:0.1.0": latte, frappe, macchiato, mocha
+
 // Workaround for the lack of an `std` scope.
 #let std-bibliography = bibliography
 #let std-smallcaps = smallcaps
@@ -9,8 +11,8 @@
 #let upper(body) = std-upper(text(tracking: 0.6pt, body))
 
 // Colors used across the template.
-#let stroke-color = luma(200)
-#let fill-color = luma(250)
+#let stroke-color = mocha.text
+#let fill-color = mocha.base
 
 // This function gets your whole document as its `body` and formats it as a simple
 // non-fiction paper.
@@ -80,7 +82,7 @@
 
   // Set the body font.
   // Default is Linux Libertine at 11pt
-  set text(font: ("Libertinus Serif", "Linux Libertine"), size: 12pt)
+  set text(font: ("Libertinus Serif", "Linux Libertine"), size: 12pt, fill: mocha.text)
 
   // Set raw text font.
   // Default is Fira Mono at 8.8pt
@@ -90,6 +92,7 @@
   set page(
     paper: paper-size,
     margin: (bottom: 1.75cm, top: 2.25cm),
+    fill: mocha.base
   )
 
   // Cover page.
@@ -192,7 +195,7 @@
 
   // Display inline code in a small box that retains the correct baseline.
   show raw.where(block: false): box.with(
-    fill: fill-color.darken(2%),
+    fill: mocha.crust,
     inset: (x: 3pt, y: 0pt),
     outset: (y: 3pt),
     radius: 2pt,
