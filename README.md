@@ -1,26 +1,26 @@
-# ‘Ilm
+# ‘Ilm Catppuccin
 
 > ‘Ilm (Urdu: عِلْم) is the Urdu term for knowledge. It is pronounced as [/ə.ləm/](https://en.wiktionary.org/wiki/%D8%B9%D9%84%D9%85#Urdu).
 
 A versatile, clean and minimal template for non-fiction writing. The template is ideal for
-class notes, reports, and books.
+class notes, reports, and books (with the catppuccin color pallette).
 
 It contains a title page, a table of contents, and indices for different types of figures;
 images, tables, code blocks.
 
 Dynamic running footer contains the title of the chapter (top-level heading).
 
-See the [example.pdf](https://github.com/talal/ilm/blob/main/example.pdf) file to see how it looks.
+See the [example.pdf](https://github.com/Quantalabs/ilm/blob/main/example.pdf) file to see how it looks.
 
 ## Usage
 
 You can use this template in the Typst web app by clicking "Start from template" on the
-dashboard and searching for `ilm`.
+dashboard and searching for `ilm-catppuccin`.
 
 Alternatively, you can use the CLI to kick this project off using the command
 
 ```sh
-typst init @preview/ilm
+typst init @preview/ilm-catppuccin
 ```
 
 Typst will create a new directory with all the files needed to get you started.
@@ -59,7 +59,7 @@ show rule. If you, however, want to change an existing project to use this templ
 can add a show rule like this at the top of your file:
 
 ```typ
-#import "@preview/ilm:1.1.2": *
+#import "@preview/ilm-catppuccin:1.1.2": *
 
 #show: ilm.with(
   title: [Your Title],
